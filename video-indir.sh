@@ -77,7 +77,7 @@ if [[ $secim == 1 ]];then
 	echo
 	echo
 	echo
-	read -e -p $'\e[31m───────[ \e[97mSEÇENEK GİRİNİZ\e[31m ]───────►  \e[0m' link
+	read -e -p $'\e[31m───────[ \e[97mLİNK GİRİNİZ\e[31m ]───────►  \e[0m' link
 	echo
 	echo
 	echo
@@ -99,7 +99,7 @@ elif [[ $secim == 2 ]];then
 	echo
 	echo
 	echo
-	read -e -p $'\e[31m───────[ \e[97mSEÇENEK GİRİNİZ\e[31m ]───────►  \e[0m' link
+	read -e -p $'\e[31m───────[ \e[97mLİNK GİRİNİZ\e[31m ]───────►  \e[0m' link
 	echo
 	echo
 	echo
@@ -132,11 +132,11 @@ elif [[ $secim == 3 ]];then
 	if [[ $secim == 1 ]];then
 		mp3
 		mv -v *.mp3 /sdcard/TERMUX-MP3
-		#clear
-		#printf "\e[32m[✓]\e[97m MP3 TERMUX-MP3 KLASÖRÜNE TAŞINDI"
-		#cd $HOME/VIDEO-INDIR
-		#sleep 2
-		#bash video-indir.sh
+		clear
+		printf "\e[32m[✓]\e[97m MP3 TERMUX-MP3 KLASÖRÜNE TAŞINDI"
+		cd $HOME/VIDEO-INDIR
+		sleep 2
+		bash video-indir.sh
 		exit
 	elif [[ $secim == 2 ]];then
 		mp4
