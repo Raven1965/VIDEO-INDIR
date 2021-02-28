@@ -107,7 +107,7 @@ elif [[ $secim == 2 ]];then
 	echo
 	echo
 	echo
-	youtube-dl -f mp4  $link
+	youtube-dl -f mp4 $link
 	clear
 	echo
 	echo
