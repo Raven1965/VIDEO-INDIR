@@ -131,7 +131,7 @@ elif [[ $secim == 3 ]];then
 	read -e -p $'\e[31m───────[ \e[97mSEÇENEK GİRİNİZ\e[31m ]───────►  \e[0m' secim
 	if [[ $secim == 1 ]];then
 		mp3
-		mv -v *.mp3 /sdcard/TERMUX-MP3
+		mv -v *{.mp3,m4a} /sdcard/TERMUX-MP3
 		clear
 		printf "\e[32m[✓]\e[97m MP3 TERMUX-MP3 KLASÖRÜNE TAŞINDI"
 		cd $HOME/VIDEO-INDIR
@@ -140,7 +140,7 @@ elif [[ $secim == 3 ]];then
 		exit
 	elif [[ $secim == 2 ]];then
 		mp4
-		mv -v *.{mp4,mkv,webm} /sdcard/TERMUX-VIDEO
+		mv -v *.{mp4,mkv,webm,part} /sdcard/TERMUX-VIDEO
 		clear
 		printf "\e[32m[✓]\e[97m VİDEO TERMUX-VİDEO KLASÖRÜNE TAŞINDI"
 		cd $HOME/VIDEO-INDIR
