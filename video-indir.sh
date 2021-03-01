@@ -1,6 +1,6 @@
 #!/bin/bash
 kontrol=$(which ffmpeg |wc -l)
-if [[ $kontrol == 1 ]];then
+if [[ $kontrol == 0 ]];then
 	echo
 	echo
 	echo
@@ -8,7 +8,7 @@ if [[ $kontrol == 1 ]];then
 	echo
 	echo
 	echo
-	pip install ffmpeg 
+	pkg install ffmpeg 
 fi
 kontrol=$(which curl |wc -l)
 if [[ $kontrol == 0 ]];then
