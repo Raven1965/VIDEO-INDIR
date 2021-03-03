@@ -44,7 +44,7 @@ bash banner.sh
 echo
 echo
 echo
-termux-tts-speak -e com.google.android.tts -l tr -p 1.0 -r 1.0 -s MUSIC hoşgeldin deyerli kullanıcı!
+termux-tts-speak -e com.google.android.tts -l en -p 0.1 -r 0.7 -s MUSIC welcome termux toolss
 mp3() {
 	if [[ -a /sdcard/TERMUX-MP3 ]];then
 		echo
