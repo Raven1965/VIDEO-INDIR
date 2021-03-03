@@ -21,6 +21,17 @@ if [[ $kontrol == 0 ]];then
 	echo
 	pkg install curl -y
 fi
+kontrol=$(which termux-tts-speak termux-vibrate |wc -l)
+if [[ $kontrol == 0 ]];then
+	echo
+	echo
+	echo
+	printf "\e[32m[✓]\e[97m TERMUX-APİ PAKETİ KURLUYOR"
+	echo
+	echo
+	echo
+	pkg install termux-api -y
+fi	
 if [[ $1 == güncelle ]];then
 	cd files
 	bash güncelleme.sh güncelle
@@ -33,6 +44,7 @@ bash banner.sh
 echo
 echo
 echo
+termux-tts-speak -e com.google.android.tts -l tr -p 1.0 -r 1.0 -s MUSIC hoşgeldin deyerli kullanıcı!
 mp3() {
 	if [[ -a /sdcard/TERMUX-MP3 ]];then
 		echo
@@ -204,6 +216,7 @@ elif [[ $secim == 3 ]];then
 	fi        	
 elif [[ $secim == x || $secim == X ]];then
 	echo
+	termux-vibrate -d 55
 	echo
 	echo
 	printf "\e[31m[!]\e[97m ÇIKIŞ YAPILDI"
